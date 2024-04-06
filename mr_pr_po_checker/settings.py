@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -73,7 +74,7 @@ WSGI_APPLICATION = 'mr_pr_po_checker.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-# postgres://pr_mr_po_user:qshErdDBI38269W8KD01oFEIFohCh5S9@dpg-co8k2g0l5elc73908eo0-a.oregon-postgres.render.com/pr_mr_po
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -85,7 +86,8 @@ DATABASES = {
     }
 }
 
-
+# override the databse and use external db url
+DATABASES["default"] = dj_database_url.parse("postgres://pr_mr_po_user:qshErdDBI38269W8KD01oFEIFohCh5S9@dpg-co8k2g0l5elc73908eo0-a.oregon-postgres.render.com/pr_mr_po")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

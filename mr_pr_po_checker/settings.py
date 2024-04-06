@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'mr_pr_po_checker.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+# postgres://pr_mr_po_user:qshErdDBI38269W8KD01oFEIFohCh5S9@dpg-co8k2g0l5elc73908eo0-a.oregon-postgres.render.com/pr_mr_po
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

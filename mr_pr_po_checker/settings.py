@@ -87,7 +87,7 @@ DATABASES = {
 }
 
 # override the databse and use external db url
-DATABASES["default"] = dj_database_url.parse("postgres://pr_mr_po_user:qshErdDBI38269W8KD01oFEIFohCh5S9@dpg-co8k2g0l5elc73908eo0-a.oregon-postgres.render.com/pr_mr_po")
+DATABASES['default'] = dj_database_url.parse("postgresql://postgres:vBlonMxOKEDknJMqbvvFFURiEnNkhlvc@monorail.proxy.rlwy.net:54368/railway")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

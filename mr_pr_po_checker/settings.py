@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+#import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%1f+rlof8_d)08s@y)09s4d=4qhfx8kndx#mi(l4j(l3^mbxc9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,7 +87,7 @@ DATABASES = {
 }
 
 # override the databse and use external db url
-DATABASES['default'] = dj_database_url.parse("postgresql://postgres:vBlonMxOKEDknJMqbvvFFURiEnNkhlvc@monorail.proxy.rlwy.net:54368/railway")
+#DATABASES['default'] = dj_database_url.parse("postgresql://postgres:DOxgcxqHLDVAqswWgPOSFtnwCvGTbEUP@roundhouse.proxy.rlwy.net:53868/railway")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

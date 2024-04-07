@@ -78,7 +78,7 @@
     </style>
 {% endif %}<br><br>
         <div class="form-container">
-            <form method="post">
+            <form method="post" novalidate>
                 {% csrf_token %}
                 <select name="field">
                     <option value="mr_num">MR</option>

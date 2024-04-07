@@ -11,7 +11,7 @@ def fun(request):
         
 
         if not re.match(r'^[0-9]+$', input_value):
-            error_message = "Invalid iput."
+            error_message = "Invalid input."
             filtered_data = MyModel.objects.all()
             return render(request, 'my_template.html', {'my_models': filtered_data, 'error_message': error_message})
         

@@ -13,7 +13,7 @@ def fun(request):
         if not re.match(r'^[0-9]+$', input_value):
             error_message = "Invalid input."
             filtered_data = MyModel.objects.all()
-            return render(request, 'my_template.html', {'my_models': filtered_data, 'error_message': error_message})
+            return render(request, 'index.html', {'my_models': filtered_data, 'error_message': error_message})
         
         elif field and input_value:
             field_type = MyModel._meta.get_field(field)
@@ -32,9 +32,9 @@ def fun(request):
                 error_message = f"No Data Found for '{field}' {input_value}"
         else:
             filtered_data = MyModel.objects.all()
-            return render(request, 'my_template.html', {'my_models': filtered_data, 'error_message': error_message})
+            return render(request, 'index.html', {'my_models': filtered_data, 'error_message': error_message})
 
     else:
         filtered_data = MyModel.objects.all()
 
-    return render(request, 'my_template.html', {'my_models': filtered_data, 'error_message': error_message})
+    return render(request, 'index.html', {'my_models': filtered_data, 'error_message': error_message})
